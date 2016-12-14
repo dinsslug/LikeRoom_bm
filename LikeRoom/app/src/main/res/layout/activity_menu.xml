@@ -2,7 +2,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_menu"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
     <include
@@ -41,10 +40,11 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textViewTitle"
                 android:gravity="center_vertical|center_horizontal"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:textSize="22sp"
                 android:textColor="@color/clrTextColorDeepDark"
-                android:layout_centerVertical="true" />
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -64,7 +64,7 @@
             <include
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                layout="@layout/include_page" />
+                layout="@layout/include_rounded_page" />
         </RelativeLayout>
 
         <android.support.design.widget.TabLayout

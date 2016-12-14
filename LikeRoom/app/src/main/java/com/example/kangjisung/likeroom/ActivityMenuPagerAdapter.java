@@ -4,15 +4,19 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
+import com.example.kangjisung.likeroom.FragmentItem.FragmentItemMain;
+import com.example.kangjisung.likeroom.FragmentPoint.FragmentPointMain;
+import com.example.kangjisung.likeroom.FragmentUser.FragmentUserMain;
+
 public class ActivityMenuPagerAdapter extends FragmentStatePagerAdapter {
-    int mNumOfTabs;
+        int mNumOfTabs;
 
-    public ActivityMenuPagerAdapter(FragmentManager fm, int NumOfTabs) {
-        super(fm);
-        this.mNumOfTabs = NumOfTabs;
-    }
+        public ActivityMenuPagerAdapter(FragmentManager fm, int NumOfTabs) {
+            super(fm);
+            this.mNumOfTabs = NumOfTabs;
+        }
 
-    @Override
+        @Override
     public Fragment getItem(int position)
     {
         switch (position) {
@@ -20,10 +24,10 @@ public class ActivityMenuPagerAdapter extends FragmentStatePagerAdapter {
                 FragmentItemMain tab1 = new FragmentItemMain();
                 return tab1;
             case 1:
-                FragmentPointMain tab2 = new FragmentPointMain();
+                FragmentUserMain tab2 = new FragmentUserMain();
                 return tab2;
             case 2:
-                FragmentUserMain tab3 = new FragmentUserMain();
+                FragmentPointMain tab3 = new FragmentPointMain();
                 return tab3;
             default:
                 return null;

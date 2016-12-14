@@ -15,8 +15,8 @@ import com.example.kangjisung.likeroom.User.MileageManage.mileage;
 import com.example.kangjisung.likeroom.User.listView.ListViewAdapter;
 import com.example.kangjisung.likeroom.User.listView.ListViewItem;
 
-public class User extends AppCompatActivity {
-
+public class User extends AppCompatActivity
+{
     ImageButton ScBtn;
     EditText ScText;
     ListView listview ;
@@ -25,7 +25,6 @@ public class User extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
-
 
         adapter = new ListViewAdapter() ;
 
@@ -64,8 +63,5 @@ public class User extends AppCompatActivity {
                 //.execSQL("SELECT Pnum FROM Custom WHERE Pnum like '%"+ ScText +"%';");
             }
         });
-
     }
-
-
 }
