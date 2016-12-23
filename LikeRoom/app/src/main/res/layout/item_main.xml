@@ -1,17 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/Gray">
+    android:background="@color/White">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Tab 1"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@color/Black" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/clrBackgroundLight"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:text="공지사항"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/clrTextColorDeepDark"
+            android:textSize="30sp"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="#FFFFFEF9"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="80dp"
+        android:id="@+id/relativeLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/user_button_new_notice">
+
+            <TextView
+                android:text="새 공지를 추가하려면 터치"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textSize="22sp"
+                android:textColor="@color/clrTextColorDeepDark"
+                android:textStyle="bold"
+                android:paddingLeft="70dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@mipmap/icon_menu_item"
+                android:layout_centerInParent="true"
+                android:paddingRight="260dp" />
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/buttonNewNotice"
+            style="@style/LikeRoomTheme.Button.EmptyBackground"
+            android:background="@drawable/button_mask" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeLayout"
+        android:id="@+id/recyclerView" />
 
 </RelativeLayout>

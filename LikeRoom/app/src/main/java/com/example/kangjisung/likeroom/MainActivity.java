@@ -31,7 +31,7 @@ public class MainActivity extends ActionBarActivity
     }
 
     protected void onDestroy() {
-        Log.i("test", "onDstory()");
+        Log.i("_test", "onDstory()");
         mHandler.removeCallbacks(mRunnable);
         super.onDestroy();
     }

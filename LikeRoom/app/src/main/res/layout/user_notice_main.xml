@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/clrBackgroundLight"
+        android:layout_height="80dp">
+
+        <TextView
+            android:text="공지사항"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/clrTextColorDeepDark"
+            android:textSize="30sp"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@color/Gray"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="80dp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/buttonNewNotice"
+            style="@style/LikeRoomTheme.Button.EmptyBackground"
+            android:background="@drawable/button_mask" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/icon_menu_item"
+            android:layout_centerInParent="true"
+            android:paddingRight="260dp" />
+
+        <TextView
+            android:text="새 공지를 추가하려면 터치"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="22sp"
+            android:textColor="@color/clrTextColorDeepDark"
+            android:textStyle="bold"
+            android:paddingLeft="70dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

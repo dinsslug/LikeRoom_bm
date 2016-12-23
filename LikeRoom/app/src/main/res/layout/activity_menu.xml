@@ -3,11 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
-    <include
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        layout="@layout/include_background" />
+    android:layout_height="fill_parent"
+    android:background="@drawable/layout_background"
+    android:theme="@style/LikeRoomTheme">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -40,11 +38,10 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textViewTitle"
                 android:gravity="center_vertical|center_horizontal"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:textSize="22sp"
                 android:textColor="@color/clrTextColorDeepDark"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true" />
+                android:layout_centerInParent="true" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -56,15 +53,22 @@
 
             <android.support.v4.view.ViewPager
                 android:id="@+id/viewPager"
-                android:layout_height="fill_parent"
-                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
                 android:background="#FFFFFF">
             </android.support.v4.view.ViewPager>
 
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/layout_rounded_page" />
+
+            <!--
             <include
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                layout="@layout/include_rounded_page" />
+                layout="@layout/_include_rounded_page" />
+            -->
         </RelativeLayout>
 
         <android.support.design.widget.TabLayout

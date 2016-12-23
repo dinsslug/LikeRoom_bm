@@ -3,6 +3,7 @@ package com.example.kangjisung.likeroom;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -45,14 +46,14 @@ public class ActivityMenu extends AppCompatActivity
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                tab.getIcon().setColorFilter(getResources().getColor(R.color.clrMenuIconSelected), PorterDuff.Mode.SRC_IN);
+                tab.getIcon().setColorFilter(ContextCompat.getColor(getBaseContext(), R.color.clrMenuIconSelected), PorterDuff.Mode.SRC_IN);
                 textViewTitle.setText(tabStringResIds[tab.getPosition()]);
                 viewPager.setCurrentItem(tab.getPosition());
             }
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
-                tab.getIcon().setColorFilter(getResources().getColor(R.color.clrMenuIcon), PorterDuff.Mode.SRC_IN);
+                tab.getIcon().setColorFilter(ContextCompat.getColor(getBaseContext(), R.color.clrMenuIcon), PorterDuff.Mode.SRC_IN);
             }
 
             @Override
@@ -82,10 +83,10 @@ public class ActivityMenu extends AppCompatActivity
 
     public void colorInitialize()
     {
-        tabLayout.getTabAt(0).getIcon().setColorFilter(getResources().getColor(R.color.clrMenuIconSelected), PorterDuff.Mode.SRC_IN);
-        tabLayout.getTabAt(1).getIcon().setColorFilter(getResources().getColor(R.color.clrMenuIcon), PorterDuff.Mode.SRC_IN);
-        tabLayout.getTabAt(2).getIcon().setColorFilter(getResources().getColor(R.color.clrMenuIcon), PorterDuff.Mode.SRC_IN);
-        imageViewSetting.setColorFilter(getResources().getColor(R.color.clrTextColorDeepDark), PorterDuff.Mode.SRC_IN);
+        tabLayout.getTabAt(0).getIcon().setColorFilter(ContextCompat.getColor(getBaseContext(), R.color.clrMenuIconSelected), PorterDuff.Mode.SRC_IN);
+        tabLayout.getTabAt(1).getIcon().setColorFilter(ContextCompat.getColor(getBaseContext(), R.color.clrMenuIcon), PorterDuff.Mode.SRC_IN);
+        tabLayout.getTabAt(2).getIcon().setColorFilter(ContextCompat.getColor(getBaseContext(), R.color.clrMenuIcon), PorterDuff.Mode.SRC_IN);
+        imageViewSetting.setColorFilter(ContextCompat.getColor(getBaseContext(), R.color.clrTextColorDeepDark), PorterDuff.Mode.SRC_IN);
     }
 
     /*

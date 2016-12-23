@@ -8,15 +8,16 @@ import com.example.kangjisung.likeroom.FragmentItem.FragmentItemMain;
 import com.example.kangjisung.likeroom.FragmentPoint.FragmentPointMain;
 import com.example.kangjisung.likeroom.FragmentUser.FragmentUserMain;
 
-public class ActivityMenuPagerAdapter extends FragmentStatePagerAdapter {
-        int mNumOfTabs;
+public class ActivityMenuPagerAdapter extends FragmentStatePagerAdapter
+{
+    int mNumOfTabs;
 
-        public ActivityMenuPagerAdapter(FragmentManager fm, int NumOfTabs) {
-            super(fm);
-            this.mNumOfTabs = NumOfTabs;
-        }
+    public ActivityMenuPagerAdapter(FragmentManager fm, int NumOfTabs) {
+        super(fm);
+        this.mNumOfTabs = NumOfTabs;
+    }
 
-        @Override
+    @Override
     public Fragment getItem(int position)
     {
         switch (position) {
